@@ -15,11 +15,11 @@ public:
 
     void setIndex(int i);
     void setName(std::string name);
+	bool checkStr(std::string str);
 
 private:
 
   static int _nbInst;
-  int    _id;
   std::string _firstName;
   std::string _lastName;
   std::string _nickName;

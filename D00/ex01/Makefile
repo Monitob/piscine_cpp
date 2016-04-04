@@ -6,11 +6,11 @@
 #    By: jbernabe <jbernabe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/01/05 14:39:04 by jbernabe          #+#    #+#              #
-#    Updated: 2015/01/05 14:39:16 by jbernabe         ###   ########.fr        #
+#    Updated: 2016/04/04 16:48:09 by jbernabe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = g++
+CC = clang++
 
 NAME = phonebook
 
