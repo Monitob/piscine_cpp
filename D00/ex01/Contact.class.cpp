@@ -6,17 +6,18 @@
 #include "Contact.class.hpp"
 
 Contact::Contact() : index(0) {
-  Contact::_nbInst += 1;
+  Contact::_count += 1;
 
   return ;
 }
+
 Contact::~Contact(){
-  Contact::_nbInst -= 1;
+  Contact::_count -= 1;
   return ;
 }
 
-int Contact::getNbInst(){
-  return Contact::_nbInst;
+size_t Contact::getNbInst(){
+  return Contact::_count;
 }
 
 void Contact::setIndex(int i){
@@ -24,19 +25,8 @@ void Contact::setIndex(int i){
     this->index = i;
 }
 
-void Contact::setName(std::string name){
-  Contact::_firstName = name;
+size_t Contact::numObjs(){
+  return Contact::_count;
 }
 
-bool Contact::checkStr(std::string str){
-	std::string whitespaces ("\n");
-	std::size_t found = str.find_last_not_of(whitespaces);
-	if (found != std::string::npos)
-	{
-	     return false;
-	}
-	return true;
-}
-
-
-int Contact::_nbInst = 0;
+size_t Contact::_count = 0;
